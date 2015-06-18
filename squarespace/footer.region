@@ -9,6 +9,9 @@
 		        {.end}
 		        <squarespace:block-field id="footer-blocks" columns="12" label="Footer Content" />
 		      </div>
+		    </div>
+		    <div id="copyright">
+		    	<p>&copy; 2015 BeetBoost&trade;</p>
 		    </div><!-- page-footer-wrapper -->
 		  
 
