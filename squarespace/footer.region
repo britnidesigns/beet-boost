@@ -10,10 +10,30 @@
 		        <squarespace:block-field id="footer-blocks" columns="12" label="Footer Content" />
 		      </div>
 		    </div>
-		    <div id="copyright">
-		    	<p>&copy; 2015 BeetBoost&trade;</p>
+		    <div id="footer-nav">
+		    	<ul>
+		    		<li class="parent"><a href='/why-beetboost'>Why BeetBoost</a>
+		    			<ul>
+		    				<li><a href='/how-it-works'>How It Works</a></li>
+		    				<li><a href='/advantages'>Advantages</a></li>
+		    				<li><a href='/energy-drinks'>Energy Drinks</a></li>
+		    			</ul>
+		    		</li>
+		    		<li class="parent"><a href='/about'>About</a>
+		    			<ul>
+		    				<li><a href='/our-story'>Our Story</a></li>
+		    				<li><a href='/faqs'>FAQs</a></li>
+		    				<li><a href='/testimonials'>Testimonials</a></li>
+		    			</ul>
+		    		</li>
+		    		<li><a href='/beetnik-world'>Beetnik World</a></li>
+		    		<li><a href='/ambassador'>Ambassador</a></li>
+		    		<li><a href='/buy'>Buy</a></li>
+		    		<li><a href='/contact'>Contact</a></li>
+		    	</ul>
+
+		    	<p id="copyright">&copy; 2015 BeetBoost&trade;</p>
 		    </div><!-- page-footer-wrapper -->
-		  
 
 		  </div>
 		</div> <!-- canvas-wrapper -->
