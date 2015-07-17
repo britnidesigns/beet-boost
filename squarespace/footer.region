@@ -28,6 +28,8 @@
 		    		<li><a href='/contact'>Contact</a></li>
 		    	</ul>
 
+		    	<squarespace:block-field id="footer-nav-custom" columns="12" />
+
 		    	<p id="copyright">&copy; 2015 BeetBoost&reg;</p>
 		    </div><!-- page-footer-wrapper -->
 
