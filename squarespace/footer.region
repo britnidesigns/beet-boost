@@ -11,7 +11,7 @@
 		      </div>
 		    </div>
 		    <div id="footer-nav">
-		    	<ul>
+		    	<!--<ul>
 		    		<li class="parent"><a href='/why-beetboost'>Why BeetBoost</a>
 		    			<ul>
 		    				<li><a href='/why-beetboost'>Advantages</a></li>
@@ -26,13 +26,12 @@
 		    		<li><a href='/ambassador'>Ambassador</a></li>
 		    		<li><a href='https://www.nutrigardens.com/shop/beet-boost/'>Buy</a></li>
 		    		<li><a href='/contact'>Contact</a></li>
-		    	</ul>
-
-		    	<squarespace:navigation navigationId="footerNav" template="footer-navigation" />
-
-		    	<squarespace:block-field id="footer-nav-custom" columns="12" />
-
-		    	<p id="copyright">&copy; 2015 BeetBoost&reg;</p>
+		    	</ul>-->
+		    	<div class="page-width">
+			    	<squarespace:navigation navigationId="footerNav" template="footer-navigation" columns="9"
+			    	 /><squarespace:block-field id="contact" columns="3" label="Contact Link" />
+			    	<squarespace:block-field id="copyright" columns="12" label="Copyright Info" />
+		    	</div>
 		    </div><!-- page-footer-wrapper -->
 
 		  </div>
