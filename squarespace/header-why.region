@@ -115,6 +115,7 @@
 				    <div id="why-navigation">
 				    	<squarespace:navigation navigationId="whyNav" template="footer-navigation" />
 				    	<squarespace:block-field id="intro" columns="12" label="Why BeetBoost Intro" />
+				    	{squarespace.main-content}
 				    </div>
 
 				  </div>
