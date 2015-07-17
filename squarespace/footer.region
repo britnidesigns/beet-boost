@@ -28,8 +28,8 @@
 		    		<li><a href='/contact'>Contact</a></li>
 		    	</ul>-->
 		    	<div class="page-width">
-			    	<squarespace:navigation navigationId="footerNav" template="footer-navigation" columns="9"
-			    	 /><squarespace:block-field id="contact" columns="3" label="Contact Link" />
+			    	<squarespace:navigation navigationId="mainNav" template="footer-navigation" columns="9"
+			    	 /><squarespace:navigation navigationId="footerNav" template="footer-navigation" columns="3" />
 			    	<squarespace:block-field id="copyright" columns="12" label="Copyright Info" />
 		    	</div>
 		    </div><!-- page-footer-wrapper -->
