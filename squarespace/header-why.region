@@ -8,7 +8,7 @@
     <squarespace:script src="site.js" />
   </head>
   {.if template.mobileStylesEnabled}{.or}<!-- Mobile Styles Are Disabled -->{.end}
-  <body class="{squarespace.page-classes}{.section website}{.if logoImageUrl} has-logo-image{.or} no-logo-image{.end}{.end}{.section collection}{.section mainImage} has-page-thumbnail{.end}{.end}" id="{squarespace.page-id}" ontouchstart="">
+  <body class="why-beetboost {squarespace.page-classes}{.section website}{.if logoImageUrl} has-logo-image{.or} no-logo-image{.end}{.end}{.section collection}{.section mainImage} has-page-thumbnail{.end}{.end}" id="{squarespace.page-id}" ontouchstart="">
 
 		{.if template.mobileStylesEnabled}
 		<squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
@@ -57,8 +57,6 @@
 							{.end}-->
 							{.end}
 
-							<div class="banner-overlay"></div>
-
 				      <!-- // logo or site title markup in banner area -->
 				      {.section website}
 				      	{.if logoImageUrl}
@@ -78,7 +76,7 @@
 
 							<!-- // page title markup in banner area -->
 				      {.section collection}
-					      <div id="page-title-wrapper" class="js-text-shrink why-beetboost" data-collection-id="{collection.id}" data-edit-main-image="Page Banner">
+					      <div id="page-title-wrapper" class="js-text-shrink" data-collection-id="{collection.id}" data-edit-main-image="Page Banner">
 				          <squarespace:block-field id="why-beetboost-header" columns="12" label="Why BeetBoost Header" />
 				          {.section mainImage}<img {@|image-meta} />{.end}
 				        </div>
