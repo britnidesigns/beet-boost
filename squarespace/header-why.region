@@ -52,9 +52,9 @@
 
 							<!-- // page thumbnail image as banner image -->
 							{.section collection}
-							{.section mainImage}
+							<!--{.section mainImage}
 								<div id="page-thumb" class="content-fill"><img {@|image-meta} /></div>
-							{.end}
+							{.end}-->
 							{.end}
 
 							<div class="banner-overlay"></div>
@@ -78,8 +78,9 @@
 
 							<!-- // page title markup in banner area -->
 				      {.section collection}
-					      <div id="page-title-wrapper" class="js-text-shrink" data-collection-id="{collection.id}" data-edit-main-image="Page Banner">
+					      <div id="page-title-wrapper" class="js-text-shrink why-beetboost" data-collection-id="{collection.id}" data-edit-main-image="Page Banner">
 				          <squarespace:block-field id="why-beetboost-header" columns="12" label="Why BeetBoost Header" />
+				          {.section mainImage}<img {@|image-meta} />{.end}
 				        </div>
 				      {.end}
 
@@ -114,8 +115,6 @@
 				    </div><!-- navigation-bottom -->
 				    <div id="why-navigation">
 				    	<squarespace:navigation navigationId="whyNav" template="footer-navigation" />
-				    	<squarespace:block-field id="intro" columns="12" label="Why BeetBoost Intro" />
-				    	{squarespace.main-content}
 				    </div>
 
 				  </div>
