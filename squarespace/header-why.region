@@ -112,7 +112,7 @@
 				    	</div>
 				    </div><!-- navigation-bottom -->
 				    <div id="why-navigation">
-				    	<squarespace:navigation navigationId="whyNav" template="footer-navigation" />
+				    	<squarespace:navigation navigationId="whyNav" template="sub-navigation" />
 				    </div>
 
 				  </div>

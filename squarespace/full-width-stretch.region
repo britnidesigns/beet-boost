@@ -31,14 +31,12 @@
 								{squarespace.main-content}
 							</div>
 
-							<div id="page-body-footer" class="extra-wrapper">
+							<div id="page-body-footer">
 								<squarespace:block-field id="page-footer-{collection.id}" description="Page Footer" columns="12" label="{collection.title} Footer Content" />
 							</div>
 
 						</div>
 					</div> <!-- content-wrapper -->
-
-					<div class="clearer" id="body-clearer"></div>
 
 	      </div>
 	    </div> <!-- page-body-wrapper -->

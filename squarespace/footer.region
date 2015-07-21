@@ -12,8 +12,8 @@
 		    </div>
 		    <div id="footer-nav">
 		    	<div class="page-width">
-			    	<squarespace:navigation navigationId="mainNav" template="footer-navigation"
-			    	/><squarespace:navigation navigationId="footerNav" template="footer-navigation" />
+			    	<squarespace:navigation navigationId="mainNav" template="sub-navigation"
+			    	/><squarespace:navigation navigationId="footerNav" template="sub-navigation" />
 			    	<squarespace:block-field id="copyright" columns="12" label="Copyright Info" />
 		    	</div>
 		    </div><!-- page-footer-wrapper -->
