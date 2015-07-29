@@ -124,6 +124,40 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 
 .sqs-layout-insert-point { left: 50px !important; }
 
+// -- Columns --
+
+.colspan-all {
+  -webkit-column-span: all;
+     -moz-column-span: all;
+          column-span: all;
+}
+
+.columns(@qty, @gap) {
+  -webkit-columns: @qty;
+     -moz-columns: @qty;
+          columns: @qty;
+  -webkit-column-gap: @gap;
+     -moz-column-gap: @gap;
+          column-gap: @gap;
+}
+
+.col-break-avoid {
+	-webkit-column-break-inside: avoid;
+    		  page-break-inside: avoid;
+    				break-insde: avoid;
+}
+
+.text-columns-2 {
+	.columns(2,50px);
+
+    h2 { .colspan-all; }
+
+    li {
+    	margin: 0 50px .5em;
+    	.col-break-avoid;
+    }
+}
+
 // ----- FOOTER -----
 
 #page-footer-wrapper {
@@ -238,8 +272,6 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 }
 
 #page-body-wrapper {
-	//padding: 0;
-
 	h2 { font-size: 2em; }
 
 	h3 {
@@ -494,6 +526,8 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 		p { margin-left: 50px; }
 	}
 
+	// -- About Us --
+
 	.about {
 		.columns(2, 100px);
 
@@ -529,7 +563,41 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 		.name { font-weight: bold; }
 		.title { font-style: italic; }
 	}
+
+	// -- Beetnik World --
+
+	.newsletter-block {
+		form { .page-width; }
+		h2 { .script; }
+		.newsletter-form-header-description p { font-size: 18px; }
+
+		// Input
+		.newsletter-form-field-element { padding: .5em .75em; }
+
+		// Button
+		.sqs-editable-button-layout { padding: .5em 2em; }
+		.newsletter-form-button { background-color: @red; }
+	}
+
+	#beetnik-get-featured {
+		overflow: hidden;
+		text-align: center;
+
+		img {
+			margin: 0 0 0 -100px;
+			float: left;
+		}
+
+		h3 {
+			color: @dk-gray;
+			.script;
+		}
+
+		a { margin: 2em 0 0; }
+	}
 }
+
+// -- Why BeetBoost --
 
 body.why-beetboost {
 	#banner-area {
@@ -547,9 +615,7 @@ body.why-beetboost {
 		}
 	}
 
-	#page-header-wrapper {
-		background: none;
-	}
+	#page-header-wrapper { background: none; }
 
 	#page-body-wrapper { padding: 0; }
 
@@ -624,6 +690,8 @@ body.why-beetboost {
 		}
 	}
 }
+
+// -- Testimonials --
 
 blockquote {
 	background: #fff;
@@ -716,38 +784,4 @@ blockquote {
 		margin-top: -.5em;
 		display: block;
 	}
-}
-
-// -- Columns --
-
-.colspan-all {
-  -webkit-column-span: all;
-     -moz-column-span: all;
-          column-span: all;
-}
-
-.columns(@qty, @gap) {
-  -webkit-columns: @qty;
-     -moz-columns: @qty;
-          columns: @qty;
-  -webkit-column-gap: @gap;
-     -moz-column-gap: @gap;
-          column-gap: @gap;
-}
-
-.col-break-avoid {
-	-webkit-column-break-inside: avoid;
-    		  page-break-inside: avoid;
-    				break-insde: avoid;
-}
-
-.text-columns-2 {
-	.columns(2,50px);
-
-    h2 { .colspan-all; }
-
-    li {
-    	margin: 0 50px .5em;
-    	.col-break-avoid;
-    }
 }
