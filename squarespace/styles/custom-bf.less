@@ -30,6 +30,8 @@
 
 .script { font-family: 'Rock Salt', sans-serif; }
 
+.semibold { font-weight: 600; }
+
 @red: #ac1d37;
 @lt-gray: #f6f6f6;
 @md-gray: #7f7f7f;
@@ -598,6 +600,11 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 		}
 	}
 
+	// Summary grid blocks
+	.sqs-block-summary-v2 {
+		.page-width;
+	}
+
 	#beetnik-get-featured {
 		height: 500px;
 		position: relative;
@@ -806,5 +813,16 @@ blockquote {
 	em {
 		margin-top: -.5em;
 		display: block;
+	}
+}
+
+// -- Blog --
+
+// Date above title
+body.blog-dateline-top article header .article-dateline-above-title { display: block; }
+
+article.featured {
+	h1.entry-title {
+		margin-top: 0;
 	}
 }
