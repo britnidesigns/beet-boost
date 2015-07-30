@@ -839,10 +839,9 @@ body.blog-list-display-full {
 
 		.button-block a, .tagcloud-block a {
 			border-bottom: 1px dotted @md-gray;
-			margin: 0 .5em;
 			display: inline-block;
 			font-size: 18px;
-			line-height: 1em;
+			line-height: 20px;
 
 			&:hover {
 				border-bottom-color: @red;
@@ -851,7 +850,7 @@ body.blog-list-display-full {
 		}
 
 		 // stops tag cloud from sizing categories based on popularity
-		.tagcloud-block ul li.title {
+		.tagcloud-block ul li {
 			font-size: 18px !important;
 			margin: 0;
 			padding: 0;
@@ -879,6 +878,7 @@ body.blog-list-display-full {
 		}
 
 		.search-block input {
+			border-color: #ccc;
 			width: 300px;
 			padding: .5em 1em;
 			color: @dk-gray;
@@ -909,6 +909,12 @@ article.hentry {
 	}
 
 	&.full-blog-post {
-		header { text-align: center; }
+		header {
+			text-align: center;
+		}
+
+		.entry-content {
+			margin: 50px 0;
+		}
 	}
 }

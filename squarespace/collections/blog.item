@@ -10,10 +10,8 @@
 
 			<header>
           {.main-image?}
-              <div class="intrinsic">
-                <div class="content">
-                  <a href="{fullUrl}" class="excerpt-image content-fill"><img {@|image-meta} /></a>
-                </div>
+              <div class="excerpt-image content-fill">
+                  <img {@|image-meta} />
               </div>
           {.end}
 
