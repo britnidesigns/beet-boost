@@ -177,7 +177,6 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 		width: inherit;
 		position: absolute;
 		top: 60px;
-		right: 17px;
 
 		.sqs-block-button-element--small {
 			background: @md-gray;
@@ -831,14 +830,9 @@ body.blog-list-display-full {
 			font-size: 18px;
 		}
 
-		.button-block a {
-			background: none;
-			padding: 0;
-			color: @md-gray;
-		}
-
 		.button-block a, .tagcloud-block a {
 			border-bottom: 1px dotted @md-gray;
+			margin: 0 .5em;
 			display: inline-block;
 			font-size: 18px;
 			line-height: 20px;
@@ -847,6 +841,13 @@ body.blog-list-display-full {
 				border-bottom-color: @red;
 				color: @red;
 			}
+		}
+
+		.button-block a {
+			background: none;
+			margin: 0;
+			padding: 0;
+			color: @md-gray;
 		}
 
 		 // stops tag cloud from sizing categories based on popularity
@@ -858,6 +859,7 @@ body.blog-list-display-full {
 
 		.sqs-block-horizontalrule hr { background-color: @red; }
 		.spacer-block { height: 0; }
+		.sqs-block-horizontalrule, .spacer-block { padding-top: 0; }
 
 		.archive-block {
 			min-width: 300px;
@@ -898,23 +900,24 @@ body.blog-dateline-top article header .article-dateline-above-title {
 }
 
 article.hentry {
-	.overview {
-		margin-top: 4em;
-	}
+	.overview { margin-top: 4em; }
 
 	h1.entry-title {
 		margin-top: 0 !important;
-		
 		&:not(#site-title):not(#page-title) { .def-font; }
 	}
 
 	&.full-blog-post {
 		header {
 			text-align: center;
+
+			// Banner image
+			.content-fill {
+				height: 400px;
+				margin-bottom: 75px;
+			}
 		}
 
-		.entry-content {
-			margin: 50px 0;
-		}
+		.entry-content { margin: 75px 0; }
 	}
 }

@@ -10,7 +10,7 @@
 
 			<header>
           {.main-image?}
-              <div class="excerpt-image content-fill">
+              <div class="content-fill">
                   <img {@|image-meta} />
               </div>
           {.end}
