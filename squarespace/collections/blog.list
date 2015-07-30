@@ -1,6 +1,6 @@
 {.section categories}
   <div class="categories-list">
-    {.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}
+    {.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" rel="tag">{@}</a>{.alternates with}/ {.end}
   </div>
 {.end}
 
@@ -15,25 +15,30 @@
         <!--POST HEADER-->
   			<header>
 
-          <span class="article-dateline-above-title">
-            <span class="date"><a href="{fullUrl}"><time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %d \| %Y}</time></a></span>
-          </span>
+          {.main-image?}
+            <div class="excerpt-thumb">
+              <div class="intrinsic">
+                <div class="content">
+                  <a href="{fullUrl}" class="excerpt-image content-fill"><img {@|image-meta} /></a>
+                </div>
+              </div>
+            </div>
+          {.end}
 
-  				{.if title}<h1 class="entry-title" data-content-field="title">{.passthrough?}<a href="{sourceUrl}" target="_blank">{title}<span class="passthrough">&rarr;</span></a>{.or}<a href="{fullUrl}">{title}</a>{.end}</h1>{.end}
+          <div class="overview">
+            <span class="article-dateline-above-title">
+              <span class="date"><a href="{fullUrl}"><time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %d} | {addedOn|date %Y}</time></a></span>
+            </span>
+
+    				{.if title}<h1 class="entry-title" data-content-field="title">{.passthrough?}<a href="{sourceUrl}" target="_blank">{title}<span class="passthrough">&rarr;</span></a>{.or}<a href="{fullUrl}">{title}</a>{.end}</h1>{.end}
+
+            {.section categories}<div class="categories"><i class="icon-bookmark"></i>{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}</div>{.end}
+            {.section tags}<div class="tags"><i class="icon-tag"></i>{.repeated section @}<a href="{collection.fullUrl}?tag={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}</div>{.end}
+          </div>
 
   			</header>
           
         <!--POST BODY-->
-
-        {.main-image?}
-        <div class="excerpt-thumb">
-          <div class="intrinsic">
-            <div class="content">
-              <a href="{fullUrl}" class="excerpt-image content-fill"><img {@|image-meta} /></a>
-            </div>
-          </div>
-        </div>
-        {.end}
         
         {.excerpt?}
 
@@ -46,9 +51,6 @@
         
         <footer class="article-meta">
           <div>
-            
-            {.section categories}<div class="categories"><i class="icon-bookmark"></i>{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}</div>{.end}
-            {.section tags}<div class="tags"><i class="icon-tag"></i>{.repeated section @}<a href="{collection.fullUrl}?tag={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}</div>{.end}
       	
             <div class="shareLoveButtons">
               {@|like-button}
