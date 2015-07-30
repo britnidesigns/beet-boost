@@ -1,6 +1,6 @@
 {.section item}
 
-  <article class="{@|item-classes}" id="article-{id}" data-item-id="{id}">
+  <article class="{@|item-classes} full-blog-post" id="article-{id}" data-item-id="{id}">
 
 	<div class="content-wrapper">
 
@@ -11,14 +11,11 @@
 			<header>
 
           <span class="article-dateline-above-title">
-            <span class="date"><a href="{fullUrl}"><time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a></span>
+            <span class="date"><a href="{fullUrl}"><time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %d} | {addedOn|date %Y}</time></a></span>
           </span>
 
           {.if title}<h1 class="entry-title" data-content-field="title">{.passthrough?}<a href="{sourceUrl}" target="_blank">{title}<span class="passthrough">&rarr;</span></a>{.or}<a href="{fullUrl}">{title}</a>{.end}</h1>{.end}
 
-          <span class="article-dateline">
-            <span class="date"><a href="{fullUrl}"><time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a><span class="delimiter">/</span></span>
-          </span>
           <span class="article-byline">
             {.section location}<span class="location">{.if addressTitle}<a href="//maps.google.com/maps?q={mapLat},{mapLng}" target="_blank" title="View map in new window">{addressTitle}</a><span class="delimiter">/</span>{.end}</span>{.end}
             {.section author}<span class="author"><a href="{collection.fullUrl}?author={id}" rel="author">{displayName}</a></span>{.end}

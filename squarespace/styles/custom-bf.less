@@ -838,13 +838,19 @@ body.blog-list-display-full {
 		}
 
 		.button-block a, .tagcloud-block a {
-			border-bottom: 1px dotted @lt-gray;
+			border-bottom: 1px dotted @md-gray;
 			display: inline-block;
 			font-size: 18px;
+
+			&:hover { border-bottom-color: @red; }
 		}
 
+		.tagcloud-block ul li.title { font-size: 18px !important; } // stops tag cloud from making more popular categories larger
+
+		.spacer-block { height: 0; }
+
 		.archive-block {
-			min-width: 200px;
+			min-width: 300px;
 
 			label { padding: 10px; }
 
@@ -854,7 +860,7 @@ body.blog-list-display-full {
 
 				.archive-group-list {
 					background-color: @lt-gray;
-					width: 180px;
+					width: 280px;
 					padding: 0 10px 10px;
 					position: absolute;
 					z-index: 50;
@@ -890,5 +896,9 @@ article.hentry {
 		margin-top: 0 !important;
 		
 		&:not(#site-title):not(#page-title) { .def-font; }
+	}
+
+	&.full-blog-post {
+		header { text-align: center; }
 	}
 }
