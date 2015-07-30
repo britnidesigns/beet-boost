@@ -820,24 +820,37 @@ blockquote {
 
 body.blog-list-display-full {
 	#page-body-header {
+		margin-bottom: 50px;
+		text-align: center;
+
 		h1 { margin-top: 0 !important; }
 
 		.button-block, .tagcloud-block, .archive-block, .search-block {
 			display: inline-block;
+			vertical-align: bottom;
+			font-size: 18px;
 		}
 
-		.buttom-block a {
-			background: @md-gray;
+		.button-block a {
+			background: @lt-gray;
 			padding: .3em .6em;
+			color: @md-gray;
+		}
+
+		.archive-block {
+			min-widht: 200px;
 		}
 
 		.search-block {
-			div { display: inline-block; }
-			
+
 			input {
 				width: 300px;
 				padding: .5em 1em;
 			}
+		}
+
+		.socialaccountlinks-v2-block {
+			border-top: 1px solid @red;
 		}
 	}
 }
@@ -856,6 +869,7 @@ article.hentry {
 
 	h1.entry-title {
 		margin-top: 0 !important;
-		.def-font;
+		
+		&:not(#site-title):not(#page-title) { .def-font; }
 	}
 }
