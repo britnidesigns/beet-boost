@@ -1,9 +1,3 @@
-{.section categories}
-  <div class="categories-list">
-    {.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" rel="tag">{@}</a>{.alternates with}/ {.end}
-  </div>
-{.end}
-
 {.repeated section items}
 
   <article class="{@|item-classes}" id="article-{id}" data-item-id="{id}">
@@ -48,23 +42,7 @@
         
         
         <!--POST FOOTER-->
-        
-        <footer class="article-meta">
-          <div>
-      	
-            <div class="shareLoveButtons">
-              {@|like-button}
-              {@|social-button-inline}
-            </div>
-
-            {.if excerpt}{.or}
-              {@|apply author-block.block}
-            {.end}
-        
-            <div class="post-entry-injection">{postItemInjectCode}</div>
-                
-          </div>
-        </footer>
+        <div class="post-entry-injection">{postItemInjectCode}</div>
         
   	</div> <!-- / post --> 
   	
