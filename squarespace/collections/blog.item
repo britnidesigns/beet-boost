@@ -9,6 +9,13 @@
     <!--POST HEADER-->
 
 			<header>
+          {.main-image?}
+              <div class="intrinsic">
+                <div class="content">
+                  <a href="{fullUrl}" class="excerpt-image content-fill"><img {@|image-meta} /></a>
+                </div>
+              </div>
+          {.end}
 
           <span class="article-dateline-above-title">
             <span class="date"><a href="{fullUrl}"><time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %d} | {addedOn|date %Y}</time></a></span>

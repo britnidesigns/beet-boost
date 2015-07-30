@@ -839,19 +839,29 @@ body.blog-list-display-full {
 
 		.button-block a, .tagcloud-block a {
 			border-bottom: 1px dotted @md-gray;
+			margin: 0 .5em;
 			display: inline-block;
 			font-size: 18px;
+			line-height: 1em;
 
-			&:hover { border-bottom-color: @red; }
+			&:hover {
+				border-bottom-color: @red;
+				color: @red;
+			}
 		}
 
-		.tagcloud-block ul li.title { font-size: 18px !important; } // stops tag cloud from making more popular categories larger
+		 // stops tag cloud from sizing categories based on popularity
+		.tagcloud-block ul li.title {
+			font-size: 18px !important;
+			margin: 0;
+			padding: 0;
+		}
 
+		.sqs-block-horizontalrule hr { background-color: @red; }
 		.spacer-block { height: 0; }
 
 		.archive-block {
 			min-width: 300px;
-
 			label { padding: 10px; }
 
 			// Dropdown
@@ -875,7 +885,7 @@ body.blog-list-display-full {
 		}
 
 		.socialaccountlinks-v2-block {
-			border-top: 1px solid @red;
+			
 		}
 	}
 }
