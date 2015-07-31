@@ -76,10 +76,9 @@
 
 							<!-- // page title markup in banner area -->
 				      {.section collection}
-				      	{.section mainImage}<img {@|image-meta} class="bb-banner" />{.end}
 					    <div id="page-title-wrapper" class="js-text-shrink" data-collection-id="{collection.id}" data-edit-main-image="Page Banner">
 				          <squarespace:block-field id="why-beetboost-header" columns="12" label="Why BeetBoost Header" />
-				          
+				      	  {.section mainImage}<img {@|image-meta} />{.end}
 				        </div>
 				      {.end}
 
