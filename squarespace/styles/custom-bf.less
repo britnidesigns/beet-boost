@@ -754,7 +754,8 @@ blockquote {
 	padding-bottom: 0 !important;
 }
 
-.summary-block-collection-type-testimonial {
+.summary-block-collection-type-testimonial.summary-block-setting-design-list,
+.summary-block-collection-type-testimonial.summary-block-setting-design-autocolumns {
 	.page-width;
 
 	.summary-item {
@@ -889,7 +890,16 @@ blockquote {
 	}
 
 	article.hentry {
-		.overview { margin-top: 4em; }
+		.excerpt-thumb {
+			border: 1px solid #ccc;
+			width: 40%;
+			float: none;
+		}
+
+		.excerpt-thumb, .overview {
+			display: inline-block;
+			vertical-align: middle;
+		}
 
 		h1.entry-title {
 			margin-top: 0 !important;
