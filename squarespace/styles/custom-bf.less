@@ -1,3 +1,5 @@
+// ----- FONTS -----
+
 @font-face {
     font-family: 'Dancing Script';
     src: url('/assets/fonts/dancingscript-regular.eot');
@@ -32,6 +34,8 @@
 
 .semibold { font-weight: 600; }
 
+// ----- VARIABLES & DEFAULTS -----
+
 @red: #ac1d37;
 @lt-gray: #f6f6f6;
 @md-gray: #7f7f7f;
@@ -52,23 +56,6 @@ html, body, p, ul, ol, button, input, select, textarea { font-size: 18px; }
 a { outline: none !important; }
 
 .center { text-align: center; }
-
-.btn {
-	background: @red;
-	padding: .4em 1em;
-	display: inline-block;
-	color: #fff;
-	.caps;
-
-	&:link, &:visited, &:hover { color: #fff; }
-	&:hover { background: darken(@red, 10%); }
-}
-
-.sqs-block-button .sqs-block-button-element--small {
-	.btn;
-	padding: .75em 1.25em;
-	font-size: 18px;
-}
 
 // ----- HEADER -----
 
@@ -126,6 +113,32 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 
 .sqs-layout-insert-point { left: 50px !important; }
 
+// -- Buttons --
+
+.btn {
+	background: @red;
+	padding: .4em 1em;
+	display: inline-block;
+	color: #fff;
+	.caps;
+
+	&:link, &:visited, &:hover { color: #fff; }
+	&:hover { background: darken(@red, 10%); }
+}
+
+.sqs-block-button .sqs-block-button-element--small, 
+body:not(.button-style-default) .sqs-editable-button, 
+.newsletter-block .newsletter-form-button {
+	padding: .4em 1em;
+	font-size: 18px;
+	line-height: 1.6em;
+
+	&:hover {
+		background: darken(@red, 10%);
+		opacity: 1 !important;
+	}
+}
+
 // -- Columns --
 
 .colspan-all {
@@ -180,7 +193,6 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 
 		.sqs-block-button-element--small {
 			background: @md-gray;
-			font-size: 16px;
 
 			&:hover {
 				background: @dk-gray;
@@ -488,7 +500,7 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 	}
 
 	.faqs {
-		margin-top: 50px;
+		margin-top: 25px;
 
 		h3 {
 			border-top: 1px solid @red;
@@ -500,6 +512,7 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 			cursor: pointer;
 
 			&:hover .icon { background: @lt-gray; }
+			&:first-child { border-top: 0; }
 
 			.icon {
 				border: 2px solid @dk-gray;
@@ -526,29 +539,9 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 	// -- About Us --
 
 	.about {
-		.columns(2, 100px);
-
-		.highlight {
-			color: @red;
-			font-size: 2em;
-		}
-
-		p.highlight {
-			margin: 1em 0;
-			line-height: 1.2em;
-			text-align: center;
-		}
-
-		img {
-			width: 100%;
-			margin-bottom: 1em;
-			display: block;
-		}
-
 		.closing, .name, .title {
 			margin: 0;
 			text-align: right;
-			.colspan-all;
 		}
 
 		.closing {
@@ -582,15 +575,12 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 		}
 
 		// Button
-		.sqs-editable-button-layout { padding: .5em 2em; }
+		.sqs-editable-button-layout { padding: .4em 1em; }
 
 		.newsletter-form-button {
-			background-color: @red;
-			border-color: @red !important;
 			.caps;
 			font-size: 18px;
-
-			&:hover { opacity: 1; }
+			font-weight: 300;
 		}
 	}
 
@@ -664,10 +654,10 @@ body.why-beetboost {
 			em { .script; }
 		}
 
-		.sqs-block-button .sqs-block-button-element--small:hover {
+		/*.sqs-block-button .sqs-block-button-element--small:hover {
 			background: darken(@red, 10%);
 			opacity: 1;
-		}
+		}*/
 	}
 }
 
@@ -764,7 +754,8 @@ blockquote {
 	padding-bottom: 0 !important;
 }
 
-.summary-block-collection-type-testimonial {
+.summary-block-collection-type-testimonial.summary-block-setting-design-list,
+.summary-block-collection-type-testimonial.summary-block-setting-design-autocolumns {
 	.page-width;
 
 	.summary-item {
@@ -798,7 +789,9 @@ blockquote {
 		padding: 25px;
 		padding-left: 50px;
 	}
+}
 
+.summary-block-collection-type-testimonial {
 	strong {
 		margin-top: 1em;
 		display: block;
@@ -810,14 +803,79 @@ blockquote {
 	}
 }
 
+// Carousel-style testimonials
+.summary-block-collection-type-testimonial.summary-block-setting-design-carousel {
+	margin-top: -50px;
+
+	.summary-heading {
+		width: 100%;
+		margin: 0 0 25px;
+		padding: 0;
+		text-align: center;
+		font-size: 20px;
+		text-transform: none;
+	}
+
+	.summary-carousel-pager {
+		float: none;
+
+		.next, .previous {
+			position: absolute;
+			top: 125px;
+
+			&:before {
+				font-size: 50px;
+				line-heigh: 50px;
+			}
+		}
+
+		.next { right: 0; }
+		.previous { left: -35px; }
+	}
+
+	.sqs-gallery-design-carousel .sqs-gallery { margin-left: 0 !important; }
+
+	.summary-item {
+		//width: @pwidth;
+		border: 2px solid #ccc;
+		border-width: 2px 0;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		//padding: 0 !important;
+	}
+
+	.summary-thumbnail-container {
+		width: 30%;
+		margin-bottom: 0;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.summary-content {
+		width: 70%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.summary-excerpt {
+		padding: 25px;
+		font-size: 18px;
+	}
+}
+
 // -- Blog --
 
-body.blog-list-display-full {
+#page-body-wrapper.beetnik-blog {
+	padding-bottom: 0;
+
 	#page-body-header {
 		margin-bottom: 50px;
 		text-align: center;
 
-		h1 { margin-top: 0 !important; }
+		h1 {
+			margin: 0;
+			font-size: 3em;
+		}
 
 		.button-block, .tagcloud-block, .archive-block, .search-block {
 			display: inline-block;
@@ -885,34 +943,44 @@ body.blog-list-display-full {
 			
 		}
 	}
-}
 
-// Date above title
-body.blog-dateline-top article header .article-dateline-above-title {
-	display: block;
-	.caps;
-	font-weight: 500;
-}
-
-article.hentry {
-	.overview { margin-top: 4em; }
-
-	h1.entry-title {
-		margin-top: 0 !important;
-		&:not(#site-title):not(#page-title) { .def-font; }
+	// Date above title
+	article header .article-dateline-above-title {
+		display: block;
+		.caps;
+		font-weight: 500;
 	}
 
-	&.full-blog-post {
-		header {
-			text-align: center;
-
-			// Banner image
-			.content-fill {
-				height: 400px;
-				margin-bottom: 75px;
-			}
+	article.hentry {
+		.excerpt-thumb {
+			border: 1px solid #ccc;
+			width: 40%;
+			float: none;
 		}
 
-		.entry-content { margin: 75px 0; }
+		.excerpt-thumb, .overview {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		h1.entry-title {
+			margin-top: 0 !important;
+			&:not(#site-title):not(#page-title) { .def-font; }
+		}
+
+		&.full-blog-post {
+			header {
+				text-align: center;
+
+				// Banner image
+				.content-fill {
+					border: 1px solid #ccc;
+					height: 400px;
+					margin-bottom: 75px;
+				}
+			}
+
+			.entry-content { margin: 75px 0; }
+		}
 	}
 }
