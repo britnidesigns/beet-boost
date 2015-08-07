@@ -65,9 +65,14 @@ a { outline: none !important; }
 }
 
 .sqs-block-button .sqs-block-button-element--small {
-	.btn;
-	padding: .75em 1.25em;
+	padding: .4em 1em;
 	font-size: 18px;
+	line-height: 1.6em;
+
+	&:hover {
+		background: darken(@red, 10%);
+		opacity: 1;
+	}
 }
 
 // ----- HEADER -----
@@ -526,29 +531,9 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 	// -- About Us --
 
 	.about {
-		.columns(2, 100px);
-
-		.highlight {
-			color: @red;
-			font-size: 2em;
-		}
-
-		p.highlight {
-			margin: 1em 0;
-			line-height: 1.2em;
-			text-align: center;
-		}
-
-		img {
-			width: 100%;
-			margin-bottom: 1em;
-			display: block;
-		}
-
 		.closing, .name, .title {
 			margin: 0;
 			text-align: right;
-			.colspan-all;
 		}
 
 		.closing {
@@ -664,10 +649,10 @@ body.why-beetboost {
 			em { .script; }
 		}
 
-		.sqs-block-button .sqs-block-button-element--small:hover {
+		/*.sqs-block-button .sqs-block-button-element--small:hover {
 			background: darken(@red, 10%);
 			opacity: 1;
-		}
+		}*/
 	}
 }
 
