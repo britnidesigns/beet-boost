@@ -1,3 +1,5 @@
+// ----- FONTS -----
+
 @font-face {
     font-family: 'Dancing Script';
     src: url('/assets/fonts/dancingscript-regular.eot');
@@ -32,6 +34,8 @@
 
 .semibold { font-weight: 600; }
 
+// ----- VARIABLES & DEFAULTS -----
+
 @red: #ac1d37;
 @lt-gray: #f6f6f6;
 @md-gray: #7f7f7f;
@@ -52,28 +56,6 @@ html, body, p, ul, ol, button, input, select, textarea { font-size: 18px; }
 a { outline: none !important; }
 
 .center { text-align: center; }
-
-.btn {
-	background: @red;
-	padding: .4em 1em;
-	display: inline-block;
-	color: #fff;
-	.caps;
-
-	&:link, &:visited, &:hover { color: #fff; }
-	&:hover { background: darken(@red, 10%); }
-}
-
-.sqs-block-button .sqs-block-button-element--small {
-	padding: .4em 1em;
-	font-size: 18px;
-	line-height: 1.6em;
-
-	&:hover {
-		background: darken(@red, 10%);
-		opacity: 1;
-	}
-}
 
 // ----- HEADER -----
 
@@ -131,6 +113,32 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 
 .sqs-layout-insert-point { left: 50px !important; }
 
+// -- Buttons --
+
+.btn {
+	background: @red;
+	padding: .4em 1em;
+	display: inline-block;
+	color: #fff;
+	.caps;
+
+	&:link, &:visited, &:hover { color: #fff; }
+	&:hover { background: darken(@red, 10%); }
+}
+
+.sqs-block-button .sqs-block-button-element--small, 
+body:not(.button-style-default) .sqs-editable-button, 
+.newsletter-block .newsletter-form-button {
+	padding: .4em 1em;
+	font-size: 18px;
+	line-height: 1.6em;
+
+	&:hover {
+		background: darken(@red, 10%);
+		opacity: 1;
+	}
+}
+
 // -- Columns --
 
 .colspan-all {
@@ -185,7 +193,6 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 
 		.sqs-block-button-element--small {
 			background: @md-gray;
-			font-size: 16px;
 
 			&:hover {
 				background: @dk-gray;
@@ -570,12 +577,11 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 		.sqs-editable-button-layout { padding: .5em 2em; }
 
 		.newsletter-form-button {
-			background-color: @red;
-			border-color: @red !important;
+			//border-color: @red !important;
+			border-weight: 0 !important;
 			.caps;
 			font-size: 18px;
-
-			&:hover { opacity: 1; }
+			font-weight: 300;
 		}
 	}
 
