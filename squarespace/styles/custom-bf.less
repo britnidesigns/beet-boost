@@ -806,13 +806,34 @@ blockquote {
 // Carousel-style testimonials
 .summary-block-collection-type-testimonial.summary-block-setting-design-carousel {
 	margin-top: -50px;
-	
+
 	.summary-heading {
+		width: 100%;
 		margin: 0 0 25px;
+		padding: 0;
 		text-align: center;
 		font-size: 20px;
 		text-transform: none;
 	}
+
+	.summary-carousel-pager {
+		float: none;
+
+		.next, .previous {
+			position: absolute;
+			top: 125px;
+
+			&:before {
+				font-size: 50px;
+				line-heigh: 50px;
+			}
+		}
+
+		.next { right: 0; }
+		.previous { left: -40px; }
+	}
+
+	//.summary-item-list { border: 2px solid #ccc; }
 
 	.summary-item {
 		border: 2px solid #ccc;
@@ -821,20 +842,19 @@ blockquote {
 
 	.summary-thumbnail-container {
 		width: 30%;
+		margin-bottom: 0;
 		display: inline-block;
 		vertical-align: middle;
 	}
 
 	.summary-content {
 		width: 70%;
-		margin-left: -25px;
 		display: inline-block;
 		vertical-align: middle;
 	}
 
 	.summary-excerpt {
 		padding: 25px;
-		padding-left: 50px;
 		font-size: 18px;
 	}
 }
