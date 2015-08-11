@@ -96,7 +96,7 @@ a { outline: none !important; }
 
 body.banner-content-page-title-description.canvas-setting-full-width .horizontal-navigation-bar nav { padding: 0; }
 
-#banner-area-wrapper { border-bottom: 10px solid @dk-gray; }
+#banner-area-wrapper { box-shadow: 0 10px 0 rgba(0,0,0,.5); }
 
 h1#page-title, .page-description p {
 	background-color: rgba(0,0,0,.75);
@@ -312,6 +312,7 @@ body:not(.button-style-default) .sqs-editable-button,
 	#page-body-header {
 		background: @lt-gray;
 		margin-bottom: 75px;
+		padding: 35px 0 25px;
 
 		> div { .page-width; }
 
@@ -320,9 +321,19 @@ body:not(.button-style-default) .sqs-editable-button,
 			color: #333;
 			.caps;
 			font-size: 20px;
+			font-weight: 400;
 		}
 
-		.newsletter-block .newsletter-form-wrapper { background-color: transparent; }
+		.newsletter-block {
+			margin-top: 0;
+
+			.newsletter-form-wrapper {
+				background-color: transparent;
+				padding: 0;
+			}
+
+			.newsletter-form-body { padding: 10px 0 0; }
+		}
 	}
 }
 
@@ -704,6 +715,8 @@ body:not(.button-style-default) .sqs-editable-button,
 // -- Why BeetBoost --
 
 body.why-beetboost {
+	#banner-area-wrapper { box-shadow: none; }
+
 	#banner-area {
 		padding-top: 0;
 		padding-bottom: 0;
@@ -912,6 +925,7 @@ blockquote {
 
 // Carousel-style testimonials
 .summary-block-collection-type-testimonial.summary-block-setting-design-carousel {
+	.page-width;
 	margin-top: -50px;
 
 	.summary-heading {
