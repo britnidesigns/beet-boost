@@ -76,16 +76,14 @@ a { outline: none !important; }
 }
 
 .horizontal-navigation-bar {
-	padding: 50px 0 15px;
+	padding: 50px 0 17px;
 
 	nav ul li a { margin: 0 0 0 2em; }
 
 	nav#main-navigation > ul > li:last-child a {
 		.btn;
-		&:hover, &:link, &:visited { color: #fff !important; }
+		//&:hover, &:link, &:visited { color: #fff !important; }
 	}
-
-	.delimiter { display: none; }
 
 	nav .subnav {
 		right: 0;
@@ -184,12 +182,21 @@ body:not(.button-style-default) .sqs-editable-button,
 	// Logo
 	.image-block {
 		width: 300px;
+		position: relative;
+		z-index: 30;
 	}
 
-	.sqs-block-button {
+	.socialaccountlinks-v2-block {
+		width: 300px;
+		margin: -70px auto 0;
+		z-index: 25;
+	}
+
+	.button-block {
 		width: inherit;
 		position: absolute;
 		top: 60px;
+		z-index: 20;
 
 		.sqs-block-button-element--small {
 			background: @md-gray;
