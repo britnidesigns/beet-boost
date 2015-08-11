@@ -130,7 +130,7 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 	text-align: center;
 
 	h2 {
-		margin: 0;
+		margin: 0 0 .25em;
 		color: #fff;
 	}
 
@@ -457,8 +457,6 @@ body:not(.button-style-default) .sqs-editable-button,
 			margin-bottom: 0;
 			padding-bottom: 125px;
 		}
-
-		.tip { margin-bottom: -100px; } // tip that's not on a Why BB page
 	}
 
 	.tip {
@@ -467,6 +465,8 @@ body:not(.button-style-default) .sqs-editable-button,
 		padding: 25px;
 		color: #fff;
 		text-align: center;
+
+		&.flush { margin-bottom: -100px; }
 
 		.page-width { position: relative; }
 
@@ -817,14 +817,22 @@ blockquote {
 	.summary-excerpt {
 		padding: 25px;
 		padding-left: 50px;
+		position: relative;
 
 		&::before {
-			content: '>\201C';
+			content: '\201C';
 			position: absolute;
-			top: 0;
-			left: 0;
-			color: #ccc;
-			font-size: 50px;
+			top: 25px;
+			left: 30px;
+			z-index: 10;
+			color: #e3e3e3;
+			font-size: 120px;
+			font-weight: bold;
+		}
+
+		p {
+			position: relative;
+			z-index: 40;
 		}
 	}
 }
