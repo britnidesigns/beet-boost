@@ -279,6 +279,11 @@ body:not(.button-style-default) .sqs-editable-button,
 		//box-shadow: inset 0 10px 0 rgba(0,0,0,.5);
 	}
 
+	#banner-area {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+
 	h1 { display: none; }
 
 	.page-description {
@@ -296,6 +301,23 @@ body:not(.button-style-default) .sqs-editable-button,
 				right: 2em;
 				.script;
 				white-space: nowrap;
+			}
+		}
+	}
+
+	#page-body-wrapper { padding-top: 0; }
+
+	#page-body-header {
+		background: @lt-gray;
+
+		> div { .page-width; }
+
+		.newsletter-block {
+			.newsletter-form-wrapper { background-color: none; }
+			
+			h2 {
+				.caps;
+				font-size: 20px;
 			}
 		}
 	}
@@ -612,7 +634,7 @@ body:not(.button-style-default) .sqs-editable-button,
 
 	.summary-block-collection-type-blog {
 		.summary-thumbnail-container { margin: 0; }
-		.summary-thumbnail { border: 1px solid #ccc; }
+		//.summary-thumbnail { border: 1px solid #ccc; }
 
 		.summary-content {
 			width: 100%;
@@ -629,14 +651,14 @@ body:not(.button-style-default) .sqs-editable-button,
 		}
 
 		.summary-title-link {
-			background: rgba(0,0,0,.25);
+			background: rgba(0,0,0,.5);
 			width: 100%;
 			height: 100%;
 			padding: 50px 25px;
 			display: block;
 
 			&:link, &:visited, &:hover { color: #fff; }
-			&:hover { background-color: @dk-gray; }
+			&:hover { background-color: fade(@dk-green, 10%); }
 		}
 
 		.summary-metadata-item { font-size: 16px; }
