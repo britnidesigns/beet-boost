@@ -73,6 +73,8 @@ a { outline: none !important; }
 	//box-shadow: 0 10px 0 rgba(0,0,0,.5);
 	position: relative;
 	z-index: 70;
+
+	.delimiter { display: none; }
 }
 
 .horizontal-navigation-bar {
@@ -80,10 +82,7 @@ a { outline: none !important; }
 
 	nav ul li a { margin: 0 0 0 2em; }
 
-	nav#main-navigation > ul > li:last-child a {
-		.btn;
-		//&:hover, &:link, &:visited { color: #fff !important; }
-	}
+	nav#main-navigation > ul > li:last-child a { .btn; }
 
 	nav .subnav {
 		right: 0;
@@ -108,9 +107,7 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 
 // ----- TEMPLATE CONTENT -----
 
-#page-body.stretch {
-	max-width: none;
-}
+#page-body.stretch { max-width: none; }
 
 .page-width {
 	max-width: @pwidth;
@@ -620,21 +617,27 @@ body:not(.button-style-default) .sqs-editable-button,
 		.summary-content {
 			width: 100%;
 			height: 100%;
+			margin: 0;
 			position: absolute;
 			bottom: 0;
-
-			.summary-title {
-				background: rgba(0,0,0,.5);
-				width: 100%;
-				height: 100%;
-				padding: 50px 25px;
-				color: #fff;
-
-				a, a:link, a:visited, a:hover { color: #fff; }
-			}
 		}
 
-		a:hover + .summary-content .summary-title { background-color: @dk-gray; }
+		.summary-title {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+		}
+
+		.summar-title-link {
+			background: rgba(0,0,0,.25);
+			width: 100%;
+			height: 100%;
+			padding: 50px 25px;
+			display: block;
+
+			&:link, &:visited, &:hover { color: #fff; }
+			&:hover { background-color: @dk-gray; }
+		}
 
 		.summary-metadata-item { font-size: 16px; }
 	}
@@ -948,7 +951,7 @@ blockquote {
 	padding-bottom: 0;
 
 	#page-body-header {
-		margin-bottom: 50px;
+		//margin-bottom: 50px;
 		text-align: center;
 
 		h1 {
@@ -1062,4 +1065,11 @@ blockquote {
 			.entry-content { margin: 75px 0; }
 		}
 	}
+}
+
+// -- Ambassador --
+
+.lightbox-content .form-wrapper .description {
+	font-size: 16px;
+	text-transform: none;
 }
