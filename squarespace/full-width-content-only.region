@@ -2,7 +2,7 @@
 
 			<div id="page-body-wrapper" class="full-width">
 				<div class="stretch">
-					<div id="page-body-header" class="extra-wrapper">
+					<div id="page-body-header flush" class="extra-wrapper">
 						<squarespace:block-field id="page-header-{collection.id}" description="Page Header" columns="12" label="{collection.title} Header Content" />
 					</div>
 		    	</div>

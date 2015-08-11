@@ -106,8 +106,6 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 	text-transform: none;
 }
 
-.page-description ~ h1 { display: none; }
-
 // ----- TEMPLATE CONTENT -----
 
 #page-body.stretch {
@@ -123,7 +121,7 @@ body.banner-content-page-title-description.canvas-setting-full-width .horizontal
 .sqs-layout-insert-point { left: 50px !important; }
 
 // -- Red full-width content header
-.stretch #page-body-header {
+.stretch #page-body-header.flush {
 	background: desaturate(lighten(@red, 5%), 15%);
 	margin: -100px 0 100px;
 	padding: 25px;
@@ -289,14 +287,7 @@ body:not(.button-style-default) .sqs-editable-button,
 	.page-description {
 		text-align: right;
 
-		p {
-			background-color: rgba(0,0,0,.75);
-			width: auto;
-			margin: 0 275px -.2em 0;
-			padding: .1em .6em;
-			display: inline-block;
-			color: #fff;
-			text-transform: none;
+		p { margin: 0 275px -.2em 0;
 
 			+ p { margin-right: 0; }
 
@@ -323,6 +314,8 @@ body:not(.button-style-default) .sqs-editable-button,
 	}
 
 	p { font-size: 1em; }
+
+	ul { padding-left: 1em; }
 
 	// -- Home Page --
 
@@ -366,7 +359,6 @@ body:not(.button-style-default) .sqs-editable-button,
 		+ section.benefits h2 { color: @lt-green; }
 
 		ul {
-			padding-left: 1em;
 			overflow: hidden;
 			font-size: 1em;
 		}
