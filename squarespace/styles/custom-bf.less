@@ -1128,15 +1128,25 @@ blockquote {
 		text-align: center;
 	}
 
-	label.title { font-weight: 500; }
+	.title { font-weight: 500; } // field title
 
-	.caption { font-size: 14px; }
+	.field-list .field .caption { font-size: 14px; }
 
-	.option { font-size: 18px; }
+	.section.underline { margin: 4em 0; }
 
-	.description {
+	.field .option { font-size: 18px; } // checkbox label
+
+	.description { // footer disclaimer
 		font-size: 18px;
 		text-align: center;
 		text-transform: none;
 	}
+
+	// Errors
+	.field-error {
+		background-color: @red;
+		font-size: 16px;
+	}
+	.form-item.error, .form-item.error .title, .form-item.error .caption { color: @red; }
+	.form-item.error input { border-color: lighten(@red, 10%); }
 }
