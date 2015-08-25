@@ -16,10 +16,9 @@
                   <a href="{fullUrl}" class="excerpt-image content-fill"><img {@|image-meta} /></a>
                 </div>
               </div>
-            </div
-          >{.end}<
+            </div>{.end}<div
 
-          div class="overview">
+           class="overview">
             <span class="article-dateline-above-title">
               <span class="date"><a href="{fullUrl}"><time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %d} | {addedOn|date %Y}</time></a></span>
             </span>
