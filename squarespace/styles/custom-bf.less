@@ -166,7 +166,6 @@ body:not(.button-style-default) .sqs-editable-button,
 
 .colspan-all {
   -webkit-column-span: all;
-     -moz-column-span: all;
           column-span: all;
 }
 
@@ -187,8 +186,6 @@ body:not(.button-style-default) .sqs-editable-button,
 
 .text-columns-2 {
 	.columns(2,50px);
-
-    h2 { .colspan-all; }
 
     li {
     	margin: 0 50px .5em;
@@ -292,7 +289,7 @@ body:not(.button-style-default) .sqs-editable-button,
 	.page-description {
 		text-align: right;
 
-		p { margin: 0 275px -.2em 0;
+		p { margin: 0 225px -.2em 0;
 
 			+ p { margin-right: 0; }
 
@@ -398,18 +395,17 @@ body:not(.button-style-default) .sqs-editable-button,
 			overflow: hidden;
 			font-size: 1em;
 		}
-
-		.btn { margin: 2em 0 0; }
 	}
 
 	div.benefits {
 		background: darken(@lt-gray, 5%);
 		margin-top: -24px; // Eliminates space between gallery images and block
+		padding-bottom: 50px;
 		position: relative;
 		
 		.column {
 			width: @pwidth / 2 - 120;
-			padding: 50px 60px 110px;
+			padding: 50px 60px;
 			display: inline-block;
 			vertical-align: top;
 			text-align: center;
@@ -427,12 +423,14 @@ body:not(.button-style-default) .sqs-editable-button,
 
 			li { list-style-type: none; }
 
-			div { // button alignment
+			/*div { // button alignment
 				width: inherit;
 				position: absolute;
 				bottom: 50px;
-			}
+			}*/
 		}
+
+		div { text-align: center; } // Button
 	}
 
 	// -- Why BeetBoost --
@@ -495,6 +493,8 @@ body:not(.button-style-default) .sqs-editable-button,
 			margin-bottom: 0;
 			padding-bottom: 125px;
 		}
+
+		p.pad { padding: 0 100px; }
 	}
 
 	.tip {
@@ -520,6 +520,10 @@ body:not(.button-style-default) .sqs-editable-button,
 				text-transform: none;
 			}
 		}
+
+		p { padding: 0 100px; }
+
+		.btn { margin-top: 1em; }
 
 		.previous, .next {
 			margin-top: -.2em;
@@ -1077,24 +1081,40 @@ blockquote {
 	}
 
 	// Date above title
-	article header .article-dateline-above-title {
+	article .post-preview .article-dateline-above-title {
 		display: block;
 		.caps;
 		font-weight: 500;
 	}
 
-	article.hentry {
-		.excerpt-thumb {
-			border: 1px solid #ccc;
-			width: 40%;
-			float: none;
-		}
-
+	// Blog list
+	.post-preview {
 		.excerpt-thumb, .overview {
 			display: inline-block;
 			vertical-align: middle;
 		}
 
+		.excerpt-thumb {
+			width: 40%;
+			margin: 0;
+			float: none;
+
+			a { border: 1px solid #ccc; }
+		}
+
+		.overview {
+			width: 55%;
+			margin-left: 5%;
+		}
+
+		h1 { margin: 0; }
+
+		.icon-bookmark { margin-right: .375em; }
+
+		.excerpt-content { margin: 1em 0; }
+	}
+
+	article.hentry {
 		h1.entry-title {
 			margin-top: 0 !important;
 			&:not(#site-title):not(#page-title) { .def-font; }
@@ -1115,6 +1135,8 @@ blockquote {
 			.entry-content { margin: 75px 0; }
 		}
 	}
+
+	#page-body-footer { margin-top: 75px; }
 }
 
 // -- Ambassador --
