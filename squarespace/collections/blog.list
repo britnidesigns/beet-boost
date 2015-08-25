@@ -28,17 +28,17 @@
 
             {.section categories}<div class="categories"><i class="icon-bookmark"></i>{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}</div>{.end}
             {.section tags}<div class="tags"><i class="icon-tag"></i>{.repeated section @}<a href="{collection.fullUrl}?tag={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}</div>{.end}
+
+            <!--POST BODY-->
+            {.excerpt?}
+
+              <div class="body entry-content excerpt-content">{excerpt}</div>
+              <a class="btn" href="{fullUrl}">Read More</a>
+            
+            {.end}
           </div>
 
   			</header>
-          
-        <!--POST BODY-->
-        
-        {.excerpt?}
-
-        <div class="body entry-content excerpt-content">{excerpt}<span class="inline-action"><a class="inline-read-more" href="{fullUrl}">Read More</a></span></div>
-        
-        {.end}
         
         
         <!--POST FOOTER-->
