@@ -7,7 +7,7 @@
       <div class="post{.passthrough?} link-list-item{.end}">
         
         <!--POST HEADER-->
-  			<header>
+  			<div class="post-preview">
 
           {.main-image?}
             <div class="excerpt-thumb">
@@ -16,10 +16,10 @@
                   <a href="{fullUrl}" class="excerpt-image content-fill"><img {@|image-meta} /></a>
                 </div>
               </div>
-            </div>
-          {.end}
+            </div
+          >{.end}<
 
-          <div class="overview">
+          div class="overview">
             <span class="article-dateline-above-title">
               <span class="date"><a href="{fullUrl}"><time class="published" datetime="{addedOn|date %F}">{addedOn|date %B %d} | {addedOn|date %Y}</time></a></span>
             </span>
@@ -38,7 +38,7 @@
             {.end}
           </div>
 
-  			</header>
+  			</div>
         
         
         <!--POST FOOTER-->
