@@ -496,7 +496,7 @@ body:not(.button-style-default) .sqs-editable-button,
 			margin-bottom: 0;
 			padding-bottom: 125px;
 		}
-		
+
 		p.pad { padding: 0 100px; }
 	}
 
@@ -524,7 +524,7 @@ body:not(.button-style-default) .sqs-editable-button,
 			}
 		}
 
-		p { max-width: 900px; }
+		p { padding: 0 100px; }
 
 		.btn { margin-top: 1em; }
 
@@ -1099,14 +1099,22 @@ blockquote {
 
 		.excerpt-thumb {
 			width: 40%;
+			margin: 0;
 			float: none;
 
 			a { border: 1px solid #ccc; }
 		}
 
-		.overview { width: 60%; }
+		.overview {
+			width: 55%;
+			margin-left: 5%;
+		}
 
-		.excerpt-content { margin-top: 1em; }
+		h1 { margin: 0; }
+
+		.icon-bookmark { margin-right: .375em; }
+
+		.excerpt-content { margin: 1em 0; }
 	}
 
 	article.hentry {
